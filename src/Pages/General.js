@@ -60,9 +60,17 @@ function General({ category, pageSize }) {
                         ? items.urlToImage
                         : "https://previews.123rf.com/images/upixel123/upixel1231405/upixel123140500012/28055994-computer-plate-204-no-content.jpg"
                     }
-                    title={items.title.slice(0, 30) + "..."}
-                    source={items.source.name}
-                    description={items.description}
+                    title={
+                      items.title
+                        ? items.title.slice(0, 30) + "..."
+                        : "No Title"
+                    }
+                    source={items.source.name ? items.source.name : "No Source"}
+                    description={
+                      items.description
+                        ? items.description
+                        : "This content is currently removed form the data."
+                    }
                   />
                 </div>
               );
